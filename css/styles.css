@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend+Deca&display=swap");
+
+:root {
+  /* Primary Colors */
+  --clr-main-bg: hsl(233, 47%, 7%);
+  --clr-card-bg: hsl(244, 38%, 16%);
+  --clr-accent: hsl(277, 64%, 61%);
+
+  /* Neutral Colors */
+  --clr-main-heading: hsl(0, 0%, 100%);
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-transparent-white-2: hsla(0, 0%, 100%, 0.6);
+
+  /* Typography */
+  --default-font: 87.5%;
+  --heading-1: "Inter", sans-serif;
+  --heading-2: "Lexend Deca", sans-serif;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--heading-1);
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-main-bg);
+}
+
+/* STYLING */
+.card-section {
+  min-height: 100vh;
+  background: var(--clr-main-bg);
+  display: grid;
+  place-items: center;
+}
+
+.section-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 4rem auto;
+}
+
+.card-center {
+  display: grid;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background: var(--clr-card-bg);
+}
+
+.card-img {
+  order: 1;
+  object-fit: cover;
+  background: linear-gradient(
+      to bottom,
+      hsla(277, 51%, 42%, 0.5),
+      hsla(277, 64%, 61%, 0.5)
+    ),
+    url("../images/image-header-desktop.jpg") no-repeat top center/cover;
+  height: 19rem;
+}
+
+.card-info {
+  order: 2;
+  padding: 2.6rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--clr-main-heading);
+  margin-bottom: 2rem;
+}
+
+.text {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--clr-transparent-white);
+  font-family: var(--heading-2);
+  margin-bottom: 2.7rem;
+}
+
+span {
+  color: var(--clr-accent);
+}
+
+.stats-info {
+  text-align: center;
+}
+
+.stats {
+  margin-bottom: 2rem;
+}
+
+.stats-header {
+  font-size: 2rem;
+  color: var(--clr-main-heading);
+  margin-bottom: 0.7rem;
+}
+
+.stats-text {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--clr-transparent-white-2);
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
+/* footer */
+.attribution {
+  width: 95vh;
+  max-width: 1180px;
+  margin: 0 auto;
+  min-height: 6rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.author-footer {
+  color: var(--clr-accent);
+}
+
+@media screen and (min-width: 1120px) {
+  .card-center {
+    grid-template-columns: 2fr 500px;
+    max-width: 1180px;
+    gap: 3rem;
+  }
+
+  .stats-info {
+    display: flex;
+    text-align: start;
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  .stats-info {
+    font-size: 1rem;
+  }
+
+  .stats-text {
+    font-size: 0.9rem;
+  }
+
+  .card-img {
+    height: 100%;
+    order: 2;
+  }
+
+  .card-info {
+    order: 1;
+    padding: 5rem;
+  }
+
+  .title {
+    font-size: 2.6rem;
+    text-align: start;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    text-align: start;
+  }
+
+  .stats {
+    margin-bottom: 0;
+  }
+
+}
+
